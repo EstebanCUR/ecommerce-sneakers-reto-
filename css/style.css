@@ -28,17 +28,12 @@ body {
 /* (with 75% opacity for lightbox background) */
 .nav {
   width: 87.2%;
-  background: orange;
   margin: 0 auto;
   height: 68px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  /*  &__close{
-       display: block;
-
-   } */
 }
 .nav__left {
   display: flex;
@@ -65,6 +60,9 @@ body {
   width: 66.6%;
   padding: 1.5625rem;
   overflow: hidden;
+}
+.nav__close {
+  display: block;
 }
 .nav__close-img {
   transition: transform 0.3s ease;
@@ -119,9 +117,58 @@ body {
   border: 2px solid hsl(26deg, 100%, 55%);
   border-radius: 50%;
 }
-
-.hidden {
-  display: none;
+@media screen and (min-width: 1440px) {
+  .nav {
+    width: 77.08%;
+    height: 115px;
+    border-bottom: 1px solid hsl(220deg, 14%, 75%);
+    /* NAV RIGHT */
+  }
+  .nav__left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3.5625rem;
+    max-height: 24px;
+  }
+  .nav__menu {
+    display: none;
+  }
+  .nav__menu-bg {
+    display: block;
+    position: unset;
+    height: unset;
+    background-color: unset;
+  }
+  .nav__menu-slide {
+    background-color: unset;
+    width: unset;
+    padding: unset;
+  }
+  .nav__link {
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 2.0625rem;
+    font-weight: 400;
+    font-size: 0.9375rem;
+    margin-top: unset;
+  }
+  .nav__close {
+    display: none;
+  }
+  .nav__right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    gap: 3.0625rem;
+  }
 }
+
+/* .hidden{
+    display: none;
+} */
 
 /*# sourceMappingURL=style.css.map */

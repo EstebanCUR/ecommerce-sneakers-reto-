@@ -4,7 +4,6 @@
 
 .nav{
     width: 87.2%;
-    background: orange;
     margin: 0 auto;
     height: 68px;
     @include mixins.flexbox(row, center, space-between);
@@ -19,6 +18,7 @@
         cursor: pointer;
     }
 
+    
     &__menu-bg{
         position: fixed;
         top: 0;
@@ -27,7 +27,7 @@
         background-color: variables.$lightBlack;
         height: 100vh;
     }
-
+    
     &__menu-slide{
         background-color: variables.$white;
         height: 100%;
@@ -35,11 +35,11 @@
         padding: mixins.pixeles-rem(25);
         overflow: hidden;
     }
-
-   /*  &__close{
+    
+    &__close{
         display: block;
-        
-    } */
+    }
+
     &__close-img{
         transition: transform .3s ease;
         cursor: pointer;
@@ -72,6 +72,8 @@
         }
     }
 
+    
+
     &__right{
         @include mixins.flexbox(row, center, space-between);
         height: 24px;
@@ -95,8 +97,57 @@
             border-radius: 50%;
         }
     }
+
+    @media screen and (min-width: 1440px) {
+        width: 77.08%;
+        height: 115px;
+        border-bottom: 1px solid variables.$grayishBlue;
+        &__left{
+            @include mixins.flexbox(row, center, space-between);
+            gap: mixins.pixeles-rem(57);
+            max-height: 24px;
+        }
+
+        &__menu{
+            display: none;
+        }
+
+        &__menu-bg{
+            display: block;
+            position: unset;
+            height: unset;
+            background-color: unset;
+        }
+
+        &__menu-slide{
+            background-color: unset;
+            width: unset;
+            padding: unset;
+        }
+
+        &__link{
+            grid-auto-flow: column;
+            grid-auto-columns: max-content;
+            gap: mixins.pixeles-rem(33);
+            font-weight: 400;
+            font-size: mixins.pixeles-rem(15);
+            margin-top: unset;
+        }
+
+        &__close{
+            display: none;
+        }
+
+        /* NAV RIGHT */
+
+        &__right{
+            @include mixins.flexbox(row, center, space-between);
+            height: 50px;
+            gap: mixins.pixeles-rem(49);
+        }
+    }
 }
 
-.hidden{
+/* .hidden{
     display: none;
-}
+} */
