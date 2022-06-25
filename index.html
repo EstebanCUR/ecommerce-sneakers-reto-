@@ -7,7 +7,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | E-commerce product page</title>
-
+  <link rel="stylesheet" href="./css/style.css">
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
@@ -15,14 +15,51 @@
   </style>
 </head>
 <body>
+  <header class="header">
+    <nav class="nav">
+      <div class="nav__left">
+        <div class="nav__menu">
+          <img src="./images/icon-menu.svg" alt="menu">
+        </div>
+        <div class="nav__logo">
+          <a href="#" class="nav__logo-a"><img src="./images/logo.svg" alt="logo"></a>
+        </div>
+        <div class="nav__menu-bg hidden">
+          <div class="nav__menu-slide">
+            <div class="nav__close">
+              <img src="./images/icon-close.svg" alt="close menu" class="nav__close-img">
+            </div>
+            <ul class="nav__link">
+              <li class="nav__items">
+                <a href="" class="nav__links">Collections</a>
+              </li>
+              <li class="nav__items">
+                <a href="" class="nav__links">Men</a>
+              </li>
+              <li class="nav__items">
+                <a href="" class="nav__links">Women</a>
+              </li>
+              <li class="nav__items">
+                <a href="" class="nav__links">About</a>
+              </li>
+              <li class="nav__items">
+                <a href="" class="nav__links">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="nav__right">
+        <div class="nav__cart">
+          <img src="./images/icon-cart.svg" alt="cart" class="nav__cart-img">
+          <div class="nav__cart-counter"></div>
+        </div>
+        <img src="./images/image-avatar.png" alt="user avatar" class="nav__avatar">
+      </div>
+    </nav>
+  </header>
 
-  Collections
-  Men
-  Women
-  About
-  Contact
-
-  Sneaker Company
+<!--   Sneaker Company
 
   Fall Limited Edition Sneakers
 
@@ -34,7 +71,7 @@
   $250.00
 
   0
-  Add to cart
+  Add to cart -->
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
