@@ -1,0 +1,102 @@
+@use 'mixins';
+@use 'variables';
+
+
+.nav{
+    width: 87.2%;
+    background: orange;
+    margin: 0 auto;
+    height: 68px;
+    @include mixins.flexbox(row, center, space-between);
+
+    &__left{
+        @include mixins.flexbox(row, center, space-between);
+        gap: mixins.pixeles-rem(16);
+        max-height: 24px;
+    }
+
+    &__menu{
+        cursor: pointer;
+    }
+
+    &__menu-bg{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: variables.$lightBlack;
+        height: 100vh;
+    }
+
+    &__menu-slide{
+        background-color: variables.$white;
+        height: 100%;
+        width: 66.6%;
+        padding: mixins.pixeles-rem(25);
+        overflow: hidden;
+    }
+
+   /*  &__close{
+        display: block;
+        
+    } */
+    &__close-img{
+        transition: transform .3s ease;
+        cursor: pointer;
+        &:hover{
+            transform: rotate(90deg);
+        }
+    }
+
+    &__link{
+        display: grid;
+        grid-auto-flow: row;
+        grid-auto-rows: max-content;
+        width: 100%;
+        gap: mixins.pixeles-rem(20);
+        font-weight: 700;
+        font-size: mixins.pixeles-rem(18);
+        line-height: mixins.pixeles-rem(26);
+        margin-top: mixins.pixeles-rem(50);
+    }
+
+    &__links{
+        &:active, :visited{
+            color: variables.$veryDarkBlue;
+            text-decoration: underline;
+        }
+
+        &:hover{
+            text-decoration: underline;
+            opacity: .75;
+        }
+    }
+
+    &__right{
+        @include mixins.flexbox(row, center, space-between);
+        height: 24px;
+        gap: mixins.pixeles-rem(22);
+    }
+
+    &__cart{
+        @include mixins.flexbox(row, center, flex-start);
+        &:hover{
+            cursor: pointer;
+        }
+    }
+
+    &__avatar{
+        height: 100%;
+        object-fit: cover;
+        border: 2px solid transparent;
+        &:hover{
+            cursor: pointer;
+            border: 2px solid variables.$orange;
+            border-radius: 50%;
+        }
+    }
+}
+
+.hidden{
+    display: none;
+}
