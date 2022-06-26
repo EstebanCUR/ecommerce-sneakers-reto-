@@ -98,31 +98,30 @@
         }
     }
 
+    .hidden{
+        display: none;
+    }
+
     @media screen and (min-width: 1440px) {
         width: 77.08%;
         height: 115px;
         border-bottom: 1px solid variables.$grayishBlue;
         &__left{
-            @include mixins.flexbox(row, center, space-between);
             gap: mixins.pixeles-rem(57);
-            max-height: 24px;
         }
 
         &__menu{
             display: none;
         }
 
-        &__menu-bg{
-            display: block;
+        &__menu-bg{         
             position: unset;
             height: unset;
-            background-color: unset;
         }
 
         &__menu-slide{
-            background-color: unset;
             width: unset;
-            padding: unset;
+            padding: 0;
         }
 
         &__link{
@@ -131,7 +130,19 @@
             gap: mixins.pixeles-rem(33);
             font-weight: 400;
             font-size: mixins.pixeles-rem(15);
-            margin-top: unset;
+            margin-top: 0;
+            color: variables.$darkGrayishBlue;
+        }
+
+        &__links{
+            display: block;
+            padding:  mixins.pixeles-rem(42) 0;
+            border-bottom: 4px solid transparent;  
+            &:hover{
+                text-decoration: none;
+                border-bottom: 4px solid variables.$orange;
+                color: variables.$veryDarkBlue;
+            }
         }
 
         &__close{
@@ -145,9 +156,11 @@
             height: 50px;
             gap: mixins.pixeles-rem(49);
         }
+        .hidden{
+            display: unset;
+        }
+        
     }
 }
 
-/* .hidden{
-    display: none;
-} */
+

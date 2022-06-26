@@ -117,6 +117,9 @@ body {
   border: 2px solid hsl(26deg, 100%, 55%);
   border-radius: 50%;
 }
+.nav .hidden {
+  display: none;
+}
 @media screen and (min-width: 1440px) {
   .nav {
     width: 77.08%;
@@ -125,26 +128,18 @@ body {
     /* NAV RIGHT */
   }
   .nav__left {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
     gap: 3.5625rem;
-    max-height: 24px;
   }
   .nav__menu {
     display: none;
   }
   .nav__menu-bg {
-    display: block;
     position: unset;
     height: unset;
-    background-color: unset;
   }
   .nav__menu-slide {
-    background-color: unset;
     width: unset;
-    padding: unset;
+    padding: 0;
   }
   .nav__link {
     grid-auto-flow: column;
@@ -152,7 +147,18 @@ body {
     gap: 2.0625rem;
     font-weight: 400;
     font-size: 0.9375rem;
-    margin-top: unset;
+    margin-top: 0;
+    color: hsl(219deg, 9%, 45%);
+  }
+  .nav__links {
+    display: block;
+    padding: 2.625rem 0;
+    border-bottom: 4px solid transparent;
+  }
+  .nav__links:hover {
+    text-decoration: none;
+    border-bottom: 4px solid hsl(26deg, 100%, 55%);
+    color: hsl(220deg, 13%, 13%);
   }
   .nav__close {
     display: none;
@@ -165,10 +171,50 @@ body {
     height: 50px;
     gap: 3.0625rem;
   }
+  .nav .hidden {
+    display: unset;
+  }
 }
 
-/* .hidden{
-    display: none;
+/* .images{
+    width: 100%;
 } */
+.slider {
+  position: relative;
+  height: 300px;
+}
+.slider__img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+.slider__arrow {
+  position: absolute;
+  top: calc(50% - 20px);
+  /* transform: translateY(-50%); */
+  background-color: hsl(0deg, 0%, 100%);
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.slider__arrow--prev {
+  left: 4%;
+  transition: transform 0.3s ease;
+}
+.slider__arrow--prev:hover {
+  transform: scale(110%);
+}
+.slider__arrow--next {
+  right: 4%;
+  transition: transform 0.3s ease;
+}
+.slider__arrow--next:hover {
+  transform: scale(110%);
+}
 
 /*# sourceMappingURL=style.css.map */

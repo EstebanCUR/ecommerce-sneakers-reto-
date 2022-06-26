@@ -1,0 +1,48 @@
+@use 'mixins';
+@use 'variables';
+
+
+/* .images{
+    width: 100%;
+} */
+
+.slider{
+    position: relative;
+    height: 300px;
+    &__img{
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+    }
+    
+    &__arrow{
+        position: absolute;
+        top: calc(50% - 20px);
+        /* transform: translateY(-50%); */
+        background-color: variables.$white;
+        border-radius: 50%;
+        width: mixins.pixeles-rem(40);
+        height: mixins.pixeles-rem(40);
+        @include mixins.flexbox(row, center, center);
+        cursor:pointer;
+        &--prev{
+            left: 4%;
+            transition:transform .3s ease;
+            &:hover{
+                transform: scale(110%);
+            }
+        }
+        
+        &--next{
+            right: 4%;
+            transition:transform .3s ease;
+            &:hover{
+                transform: scale(110%);
+            }
+        }
+    }
+    
+    
+}
+
+
