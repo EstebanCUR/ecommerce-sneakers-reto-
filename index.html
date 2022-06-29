@@ -16,7 +16,7 @@
 </head>
 <body>
   <header class="header">
-    <nav class="nav">
+    <nav class="nav container">
       <div class="nav__left">
         <div class="nav__menu">
           <img src="./images/icon-menu.svg" alt="menu">
@@ -76,14 +76,36 @@
         <img src="./images/image-product-4-thumbnail.jpg" alt="" class="slider__thumbnails">
       </div> -->
     </section>
+
+    <section class="info container">
+      <h3 class="info__company">Sneaker Company</h3>
+      <h1 class="info__title">Fall Limited Edition <br> Sneakers</h1>
+      <p class="info__paragraph">These low-profile sneakers are your perfect casual wear companion. Featuring a 
+        durable rubber outer sole, they’ll withstand everything the weather can offer.
+      </p>
+
+      <div class="price">
+        <div class="price__group">
+          <span class="price__original">$125.00</span>
+          <span class="price__discount">50%</span>
+        </div>
+        <span class="price__old">$250.00</span>
+      </div>
+
+      <div class="counter">
+        <div class="counter__wrapper button">
+          <img src="./images/icon-minus.svg" alt="Symbol minus" class="counter__symbols" id="minus">
+          <span class="counter__number">0</span>
+          <img src="./images/icon-plus.svg" alt="Symbol plus" class="counter__symbols" id="plus">
+        </div>
+        <button type="button" class="counter__add button">
+          <img src="./images/icon-cart.svg" alt="cart button add" class="counter__cart">
+          <p class="counter__text">Add to cart</p>
+        </button>
+      </div>
+    </section>
   </main>
-<!--   Sneaker Company
-
-  Fall Limited Edition Sneakers
-
-  These low-profile sneakers are your perfect casual wear companion. Featuring a 
-  durable rubber outer sole, they’ll withstand everything the weather can offer.
-
+<!--
   $125.00
   50%
   $250.00
@@ -93,7 +115,7 @@
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Esteban Cueto</a>.
   </div>
 </body>
 </html>

@@ -1,0 +1,100 @@
+@use 'mixins';
+@use 'variables';
+
+.info{
+    display: grid;
+    grid-auto-flow: row;
+    grid-auto-rows: max-content;
+    gap: mixins.pixeles-rem(19);
+    &__company{
+        color: variables.$orange;
+        font-size: mixins.pixeles-rem(12);
+        text-transform: uppercase;
+    }
+
+    &___title{
+        font-size: mixins.pixeles-rem(28);
+        line-height: 32px;
+        font-weight: 700;
+        color: variables.$veryDarkBlue;
+    }
+
+    &__paragraph{
+        color: variables.$darkGrayishBlue;
+        font-weight: 400;
+        font-size: mixins.pixeles-rem(15);
+        line-height: mixins.pixeles-rem(25);
+    }
+
+}
+
+.price{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    font-weight: 700;
+    &__group{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__original{
+        font-size: mixins.pixeles-rem(28);
+    }
+
+    &__discount{
+        color: variables.$orange;
+        background-color: variables.$paleOrange;
+        padding: 5.5px 10px;
+        border-radius: 6px;
+    }
+
+    &__old{
+        justify-self: end;
+        color: variables.$grayishBlue;
+        font-size: mixins.pixeles-rem(16);
+        text-decoration:line-through;
+    }
+}
+
+.counter{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: mixins.pixeles-rem(16);
+    margin-bottom: mixins.pixeles-rem(65);
+    &__wrapper{
+        grid-column: span 3;
+        background-color: variables.$lightGrayishBlue;
+        @include mixins.flexbox(row, center, space-between);
+    }
+
+    &__symbols{
+        padding: mixins.pixeles-rem(24);
+        transition: all .3s ease;
+        &:hover{
+            cursor: pointer;
+            transform: scale(120%);
+            background-color: rgb(204, 204, 204);
+            opacity: 0.5;
+        }
+    }
+
+    &__add{
+        grid-column: span 3;
+        background-color: variables.$orange;
+        @include mixins.flexbox(row, center, center);
+        gap: mixins.pixeles-rem(12);
+        color: variables.$white;
+        transition: all .3s ease;
+        &:hover{
+            cursor: pointer;
+            background-color: variables.$paleOrange;
+        }
+    }
+
+    &__cart{
+        width: mixins.pixeles-rem(16);
+        filter: brightness(300%);
+    }
+}

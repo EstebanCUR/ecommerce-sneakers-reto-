@@ -21,15 +21,26 @@ body {
   font-family: "Kumbh Sans", sans-serif;
 }
 
+.button {
+  outline: none;
+  border: none;
+  height: 3.5rem;
+  font-weight: 700;
+  border-radius: 0.625rem;
+  overflow: hidden;
+}
+
 /* ## Colors */
 /*  */
 /* ### Primary */
 /* ### Neutral */
 /* (with 75% opacity for lightbox background) */
-.nav {
+.container {
   width: 87.2%;
-  margin: 0 auto;
-  height: 68px;
+  margin: 24px auto;
+}
+
+.nav {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -215,6 +226,101 @@ body {
 }
 .slider__arrow--next:hover {
   transform: scale(110%);
+}
+
+.info {
+  display: grid;
+  grid-auto-flow: row;
+  grid-auto-rows: max-content;
+  gap: 1.1875rem;
+}
+.info__company {
+  color: hsl(26deg, 100%, 55%);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+.info___title {
+  font-size: 1.75rem;
+  line-height: 32px;
+  font-weight: 700;
+  color: hsl(220deg, 13%, 13%);
+}
+.info__paragraph {
+  color: hsl(219deg, 9%, 45%);
+  font-weight: 400;
+  font-size: 0.9375rem;
+  line-height: 1.5625rem;
+}
+
+.price {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  font-weight: 700;
+}
+.price__group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.price__original {
+  font-size: 1.75rem;
+}
+.price__discount {
+  color: hsl(26deg, 100%, 55%);
+  background-color: hsl(25deg, 100%, 94%);
+  padding: 5.5px 10px;
+  border-radius: 6px;
+}
+.price__old {
+  justify-self: end;
+  color: hsl(220deg, 14%, 75%);
+  font-size: 1rem;
+  text-decoration: line-through;
+}
+
+.counter {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 4.0625rem;
+}
+.counter__wrapper {
+  grid-column: span 3;
+  background-color: hsl(223deg, 64%, 98%);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.counter__symbols {
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+.counter__symbols:hover {
+  cursor: pointer;
+  transform: scale(120%);
+  background-color: rgb(204, 204, 204);
+  opacity: 0.5;
+}
+.counter__add {
+  grid-column: span 3;
+  background-color: hsl(26deg, 100%, 55%);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  color: hsl(0deg, 0%, 100%);
+  transition: all 0.3s ease;
+}
+.counter__add:hover {
+  cursor: pointer;
+  background-color: hsl(25deg, 100%, 94%);
+}
+.counter__cart {
+  width: 1rem;
+  filter: brightness(300%);
 }
 
 /*# sourceMappingURL=style.css.map */

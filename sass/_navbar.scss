@@ -1,11 +1,11 @@
 @use 'mixins';
 @use 'variables';
 
-
-.nav{
+.container{
     width: 87.2%;
-    margin: 0 auto;
-    height: 68px;
+    margin: 24px auto;
+}
+.nav{
     @include mixins.flexbox(row, center, space-between);
 
     &__left{
