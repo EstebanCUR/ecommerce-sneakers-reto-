@@ -5,44 +5,79 @@
 /* .images{
     width: 100%;
 } */
-
-.slider{
-    position: relative;
-    height: 300px;
-    &__img{
-        height: 100%;
-        object-fit: cover;
-        width: 100%;
+.images{
+    display: flex;
+    flex-direction: column;
+    gap: mixins.pixeles-rem(32);
+    &__thumbnail{
+        display: none;
     }
-    
-    &__arrow{
-        position: absolute;
-        top: calc(50% - 20px);
-        /* transform: translateY(-50%); */
-        background-color: variables.$white;
-        border-radius: 50%;
-        width: mixins.pixeles-rem(40);
-        height: mixins.pixeles-rem(40);
-        @include mixins.flexbox(row, center, center);
-        cursor:pointer;
-        &--prev{
-            left: 4%;
-            transition:transform .3s ease;
-            &:hover{
-                transform: scale(110%);
+    @media screen and (min-width: 1440px){
+        &__thumbnail{
+            display: flex;
+            justify-content: space-around;
+            gap: mixins.pixeles-rem(31);
+            width: 100%;
+            
+        }
+        
+        &__thumbnails{
+            width: 25%;
+            border-radius: mixins.pixeles-rem(10);
+        }
+        
+    }
+    .slider{
+        position: relative;
+        height: 300px;
+        
+        z-index: 0;
+        &__img{
+            position: absolute;
+            height: 100%;
+            object-fit: cover;
+            width: 100%;
+            display: none;
+            &--show{
+                display: unset;
             }
         }
         
-        &--next{
-            right: 4%;
+        &__arrow{
+            position: absolute;
+            top: calc(50% - 20px);
+            /* transform: translateY(-50%); */
+            display: unset;
+            background-color: variables.$white;
+            border-radius: 50%;
+            width: mixins.pixeles-rem(40);
+            height: mixins.pixeles-rem(40);
+            @include mixins.flexbox(row, center, center);
+            cursor:pointer;
             transition:transform .3s ease;
             &:hover{
                 transform: scale(110%);
             }
+            &--prev{
+                left: 4%;
+                
+            } 
+            &--next{
+                right: 4%;
+            }
+        }
+        @media screen and (min-width: 1440px){
+            min-height: mixins.pixeles-rem(445);
+            &__img{
+                border-radius: mixins.pixeles-rem(15);
+            }
+            &__arrow{
+                display: none;
+            }
         }
     }
-    
-    
 }
+
+
 
 

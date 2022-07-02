@@ -24,7 +24,7 @@
         <div class="nav__logo">
           <a href="#" class="nav__logo-a"><img src="./images/logo.svg" alt="logo"></a>
         </div>
-        <div class="nav__menu-bg hidden">
+        <div class="nav__menu-bg">
           <div class="nav__menu-slide">
             <div class="nav__close">
               <img src="./images/icon-close.svg" alt="close menu" class="nav__close-img">
@@ -58,23 +58,26 @@
       </div>
     </nav>
   </header>
-  <main>
+  <main class="main container">
     <section class="images">
       <div class="slider">
-        <img src="./images/image-product-1.jpg" alt="photo original" class="slider__img">
-        <div class="slider__arrow slider__arrow--prev">
+        <img src="./images/image-product-1.jpg" alt="photo original" class="slider__img slider__img--show" data-id="1">
+        <img src="./images/image-product-2.jpg" alt="photo original" class="slider__img" data-id="2">
+        <img src="./images/image-product-3.jpg" alt="photo original" class="slider__img" data-id="3">
+        <img src="./images/image-product-4.jpg" alt="photo original" class="slider__img" data-id="4">
+        <div class="slider__arrow slider__arrow--prev" id="prev">
           <img src="./images/icon-previous.svg" alt="previous arrow">
         </div>
-        <div class="slider__arrow slider__arrow--next">
+        <div class="slider__arrow slider__arrow--next" id="next">
           <img src="./images/icon-next.svg" alt="next arrow">
         </div>
       </div>
-      <!-- <div class="images__thumbnail">
-        <img src="./images/image-product-1-thumbnail.jpg" alt="" class="slider__thumbnails">
-        <img src="./images/image-product-2-thumbnail.jpg" alt="" class="slider__thumbnails">
-        <img src="./images/image-product-3-thumbnail.jpg" alt="" class="slider__thumbnails">
-        <img src="./images/image-product-4-thumbnail.jpg" alt="" class="slider__thumbnails">
-      </div> -->
+      <div class="images__thumbnail">
+        <img src="./images/image-product-1-thumbnail.jpg" alt="" class="images__thumbnails">
+        <img src="./images/image-product-2-thumbnail.jpg" alt="" class="images__thumbnails">
+        <img src="./images/image-product-3-thumbnail.jpg" alt="" class="images__thumbnails">
+        <img src="./images/image-product-4-thumbnail.jpg" alt="" class="images__thumbnails">
+      </div>
     </section>
 
     <section class="info container">
@@ -95,7 +98,7 @@
       <div class="counter">
         <div class="counter__wrapper button">
           <img src="./images/icon-minus.svg" alt="Symbol minus" class="counter__symbols" id="minus">
-          <span class="counter__number">0</span>
+          <span class="counter__number" id="number-counter">0</span>
           <img src="./images/icon-plus.svg" alt="Symbol plus" class="counter__symbols" id="plus">
         </div>
         <button type="button" class="counter__add button">
@@ -117,5 +120,8 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Esteban Cueto</a>.
   </div>
+  <script src="./js/menu.js"></script>
+  <script src="./js/slider.js"></script>
+  <script src="./js/counter.js"></script>
 </body>
 </html>

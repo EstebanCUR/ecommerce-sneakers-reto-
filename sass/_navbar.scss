@@ -21,11 +21,17 @@
     
     &__menu-bg{
         position: fixed;
+        z-index: 9;
         top: 0;
         left: 0;
         right: 0;
         background-color: variables.$lightBlack;
         height: 100vh;
+        display: none;
+        
+        &--show{
+            display: unset;
+        }
     }
     
     &__menu-slide{
@@ -117,6 +123,7 @@
         &__menu-bg{         
             position: unset;
             height: unset;
+            display: unset;
         }
 
         &__menu-slide{

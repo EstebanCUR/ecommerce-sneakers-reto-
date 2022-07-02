@@ -1,6 +1,19 @@
 @use 'mixins';
 @use 'variables';
 
+.main{
+    width: 100%;
+    @media screen and (min-width: 1440px){
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 125px;
+        width: 77.08%;
+        padding: mixins.pixeles-rem(48);
+        margin-top: 42px;
+    }
+}
+
 .info{
     display: grid;
     grid-auto-flow: row;
@@ -12,7 +25,7 @@
         text-transform: uppercase;
     }
 
-    &___title{
+    &__title{
         font-size: mixins.pixeles-rem(28);
         line-height: 32px;
         font-weight: 700;
@@ -22,9 +35,26 @@
     &__paragraph{
         color: variables.$darkGrayishBlue;
         font-weight: 400;
-        font-size: mixins.pixeles-rem(15);
+        font-size: mixins.pixeles-rem(12);
         line-height: mixins.pixeles-rem(25);
     }
+    @media screen and (min-width: 1440px){
+        gap: mixins.pixeles-rem(27);
+        &__company{
+            font-size: mixins.pixeles-rem(13);
+        }
+    
+        &__title{
+            font-size: mixins.pixeles-rem(44);
+            line-height: mixins.pixeles-rem(48);
+        }
+    
+        &__paragraph{
+            font-size: mixins.pixeles-rem(16);
+            line-height: mixins.pixeles-rem(26);
+        }
+    }
+    
 
 }
 
@@ -55,6 +85,20 @@
         color: variables.$grayishBlue;
         font-size: mixins.pixeles-rem(16);
         text-decoration:line-through;
+    }
+    @media screen and (min-width: 1440px){
+        grid-template-columns: repeat(3, 1fr);
+        gap: mixins.pixeles-rem(10);
+        &__group{
+            display: flex;
+            justify-content: space-between;
+            gap: mixins.pixeles-rem(10);
+            align-items: center;
+        }
+        &__old{
+            grid-column:1/2;
+            justify-self: start;
+        }
     }
 }
 
@@ -96,5 +140,16 @@
     &__cart{
         width: mixins.pixeles-rem(16);
         filter: brightness(300%);
+    }
+    @media screen and (min-width: 1440px){
+        grid-template-columns: repeat(3, 1fr);
+        margin-bottom: mixins.pixeles-rem(0);
+        &__wrapper{
+            grid-column: 1/2;
+        }
+        &__add{
+            grid-column: 2/4
+        }
+        
     }
 }
